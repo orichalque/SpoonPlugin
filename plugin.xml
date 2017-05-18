@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="popup:org.eclipse.jdt.ui.PackageExplorer">
+         <menu
+               icon="icons/sample.gif"
+               id="spoonMenu"
+               label="Spoon">
+            <command
+                  commandId="SpoonEclipsePlugin.spoonCommand"
+                  id="SEP.toolbars.launchSpoon"
+                  label="Spoon">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="spooneclipseplugin.handlers.SampleHandler"
+            commandId="SpoonEclipsePlugin.spoonCommand">
+      </handler>
+   </extension>
+
+
+</plugin>
