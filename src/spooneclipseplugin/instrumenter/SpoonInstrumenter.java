@@ -24,10 +24,7 @@ public class SpoonInstrumenter {
 		
 		List<String> jars = new ArrayList<>();
 		
-		
 		Files.walk(new File(absoluteUri.concat(LIB_DIRECTORY)).toPath()).forEach(p -> jars.add(p.toString()));
-		
-		jars.forEach(s -> System.out.println(s));
 		
 		launcher.getEnvironment().setSourceClasspath(jars.toArray(new String[jars.size()]));
 		
